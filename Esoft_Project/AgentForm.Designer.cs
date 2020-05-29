@@ -40,12 +40,12 @@
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxDealShare = new System.Windows.Forms.TextBox();
             this.listViewAgents = new System.Windows.Forms.ListView();
-            this.pictureLogo = new System.Windows.Forms.PictureBox();
             this.columnID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnFN = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnMN = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnLN = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnDealShare = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,15 +164,6 @@
             this.listViewAgents.View = System.Windows.Forms.View.Details;
             this.listViewAgents.SelectedIndexChanged += new System.EventHandler(this.listViewAgents_SelectedIndexChanged);
             // 
-            // pictureLogo
-            // 
-            this.pictureLogo.Image = global::Esoft_Project.Properties.Resources.logo;
-            this.pictureLogo.Location = new System.Drawing.Point(15, 168);
-            this.pictureLogo.Name = "pictureLogo";
-            this.pictureLogo.Size = new System.Drawing.Size(204, 104);
-            this.pictureLogo.TabIndex = 12;
-            this.pictureLogo.TabStop = false;
-            // 
             // columnID
             // 
             this.columnID.Text = "Id";
@@ -193,6 +184,15 @@
             // 
             this.columnDealShare.Text = "Ставка";
             // 
+            // pictureLogo
+            // 
+            this.pictureLogo.Image = global::Esoft_Project.Properties.Resources.logo;
+            this.pictureLogo.Location = new System.Drawing.Point(15, 168);
+            this.pictureLogo.Name = "pictureLogo";
+            this.pictureLogo.Size = new System.Drawing.Size(204, 104);
+            this.pictureLogo.TabIndex = 12;
+            this.pictureLogo.TabStop = false;
+            // 
             // AgentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +212,7 @@
             this.Controls.Add(this.buttonChange);
             this.Controls.Add(this.buttonAdd);
             this.Name = "AgentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Риелторы";
             this.Load += new System.EventHandler(this.AgentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
