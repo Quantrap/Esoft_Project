@@ -119,6 +119,7 @@ namespace Esoft_Project
             }
             Program.wtfDb.RealEstateSet.Add(realEstateSet);
             Program.wtfDb.SaveChanges();
+            showRealEstateSet();
         }
         void showRealEstateSet()
         {
@@ -367,6 +368,36 @@ namespace Esoft_Project
             catch
             {
                 MessageBox.Show("Невозможно удалить, эта запись используется","Ошибка",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void textBoxCoordinate_longitude_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxCoordinate_longitude.Text != "" && textBoxCoordinate_longitude.Text != "-")
+            { if (Convert.ToDouble(textBoxCoordinate_longitude.Text) > 180 || Convert.ToDouble(textBoxCoordinate_longitude.Text) < -180) textBoxCoordinate_longitude.Text = ""; }
+        }
+
+        private void textBoxLongitude_PressKey(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if(!Char.IsDigit(number)|| number!='-' || number != ',')
+            {
+                e.Handled = false;
+            }
+        }
+
+        private void textBoxCoordinate_latitude_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxCoordinate_latitude.Text != "" && textBoxCoordinate_latitude.Text != "-")
+            { if (Convert.ToDouble(textBoxCoordinate_latitude.Text) > 90 || Convert.ToDouble(textBoxCoordinate_latitude.Text) < -90) textBoxCoordinate_latitude.Text = ""; }
+        }
+
+        private void textBoxLatitudeCoordinate_PressKey(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number) || number != '-' || number != ',')
+            {
+                e.Handled = false;
             }
         }
     }

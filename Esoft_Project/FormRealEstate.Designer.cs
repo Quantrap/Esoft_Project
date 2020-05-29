@@ -122,6 +122,8 @@
             this.textBoxCoordinate_latitude.Name = "textBoxCoordinate_latitude";
             this.textBoxCoordinate_latitude.Size = new System.Drawing.Size(149, 20);
             this.textBoxCoordinate_latitude.TabIndex = 5;
+            this.textBoxCoordinate_latitude.TextChanged += new System.EventHandler(this.textBoxCoordinate_latitude_TextChanged);
+            this.textBoxCoordinate_latitude.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLatitudeCoordinate_PressKey);
             // 
             // textBoxCoordinate_longitude
             // 
@@ -129,6 +131,8 @@
             this.textBoxCoordinate_longitude.Name = "textBoxCoordinate_longitude";
             this.textBoxCoordinate_longitude.Size = new System.Drawing.Size(149, 20);
             this.textBoxCoordinate_longitude.TabIndex = 6;
+            this.textBoxCoordinate_longitude.TextChanged += new System.EventHandler(this.textBoxCoordinate_longitude_TextChanged);
+            this.textBoxCoordinate_longitude.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLongitude_PressKey);
             // 
             // textBoxTotalArea
             // 
