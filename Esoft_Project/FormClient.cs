@@ -73,8 +73,6 @@ namespace Esoft_Project
                 clientSet.LastName = textBoxLastName.Text;
                 clientSet.Phone = textBoxPhone.Text;
                 clientSet.Email = textBoxEmail.Text;
-                Program.wtfDb.SaveChanges();
-                ShowClient();
             }
             else
             {
